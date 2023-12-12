@@ -150,11 +150,12 @@ strong {
   border: unset;
   border: 1px dashed #bbb;
   font-size: 16px;
-  padding: 17px 0;
+  padding: 17px 0 17px 65px;
   width: 100%;
   border-radius: 50px;
   background: #ededed;
-
+  position: relative;
+  text-align: start;
   cursor: pointer;
   &:hover {
     background: #a5a5a5 !important;
@@ -163,6 +164,17 @@ strong {
   &:active {
     color: #fff !important;
     background: #535252 !important;
+  }
+  &::before {
+    background-color: #f5d9d8;
+    content: "";
+    background: url("../img/arrow.svg") no-repeat;
+    color: #fff;
+    font-size: 26px;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    left: 30px;
   }
 }
 
@@ -600,6 +612,7 @@ main {
       margin: unset;
       padding: 20px 13px;
       border-bottom: 1px solid #4a4a4a4a;
+
       a {
         display: flex;
         justify-content: space-between;
@@ -647,6 +660,10 @@ main {
     img {
       border-radius: 50%;
     }
+  }
+
+  .item {
+    margin-bottom: 42px;
   }
 }
 

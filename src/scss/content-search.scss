@@ -1,0 +1,55 @@
+a {
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 15px;
+  text-align: start;
+}
+
+main {
+  margin-top: 60px;
+
+  article {
+    background-color: unset !important;
+    margin: unset !important;
+    padding: unset !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid;
+    .entry-summary {
+      font-size: 12px;
+      letter-spacing: 0.4px;
+    }
+
+    .pic {
+      height: 43.9vw;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  main {
+    article {
+      .pic {
+        height: 30.07vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  main {
+    article {
+      .pic {
+        height: 19.8vw;
+      }
+    }
+  }
+}

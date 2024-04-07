@@ -6,23 +6,141 @@ add_action('wp_footer', 'iconsTheme_scripts');
 
 function register_post_types()
 {
-    register_post_type('Gallerys', [
+
+    register_post_type('Plots', [
         'taxonomies' => [], // post related taxonomiesk
         'label' => null,
         'labels' => [
-            'name' => 'Gallerys', // name for the post type.
-            'singular_name' => 'Gallerys', // name for single post of that type.
-            'add_new' => 'Add Gallery', // to add a new post.
-            'add_new_item' => 'Adding Gallery', // title for a newly created post in the admin panel.
-            'edit_item' => 'Edit Gallery', // for editing post type.
-            'new_item' => 'New Gallery', // new post's text.
-            'view_item' => 'See Gallery', // for viewing this post type.
-            'search_items' => 'Search Gallery', // search for these post types.
+            'name' => 'Plots', // name for the post type.
+            'singular_name' => 'Plots', // name for single post of that type.
+            'add_new' => 'Add Plots', // to add a new post.
+            'add_new_item' => 'Adding Plots', // title for a newly created post in the admin panel.
+            'edit_item' => 'Edit Plots', // for editing post type.
+            'new_item' => 'New Plots', // new post's text.
+            'view_item' => 'See Plots', // for viewing this post type.
+            'search_items' => 'Search Plots', // search for these post types.
             'not_found' => 'Not Found', // if search has not found anything.
             'parent_item_colon' => '', // for parents (for hierarchical post types).
-            'menu_name' => 'Gallerys', // menu name.
+            'menu_name' => 'Plots', // menu name.
         ],
-        'description' => 'Our Gallerys',
+        'description' => 'Our Plots',
+        'public' => true,
+        'publicly_queryable' => true, // depends on public
+        'exclude_from_search' => true, // depends on public
+        'show_ui' => true, // depends on public
+        'show_in_nav_menus' => true, // depends on public
+        'show_in_menu' => null, // whether to in admin panel menu
+        //'show_in_admin_bar'   => null, // depends on show_in_menu.
+        'show_in_rest' => null, // Add to REST API. WP 4.7.
+        'rest_base' => null, // $post_type. WP 4.7.
+        'menu_position' => 4,
+        'menu_icon' => 'dashicons-admin-customizer',
+        //'capability_type'   => 'post',
+        //'capabilities'      => 'post', // Array of additional rights for this post type.
+        //'map_meta_cap'      => null, // Set to true to enable the default handler for meta caps.
+        'hierarchical' => false,
+        // [ 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' ]
+        'supports' => ['title', 'editor', 'thumbnail', 'post-formats'],
+        'has_archive' => false,
+        'rewrite' => true,
+        'query_var' => true,
+    ]);
+
+    register_post_type('Temples', [
+        'taxonomies' => [], // post related taxonomiesk
+        'label' => null,
+        'labels' => [
+            'name' => 'Temples', // name for the post type.
+            'singular_name' => 'Temples', // name for single post of that type.
+            'add_new' => 'Add Temples', // to add a new post.
+            'add_new_item' => 'Adding Temples', // title for a newly created post in the admin panel.
+            'edit_item' => 'Edit Temples', // for editing post type.
+            'new_item' => 'New Temples', // new post's text.
+            'view_item' => 'See Temples', // for viewing this post type.
+            'search_items' => 'Search Temples', // search for these post types.
+            'not_found' => 'Not Found', // if search has not found anything.
+            'parent_item_colon' => '', // for parents (for hierarchical post types).
+            'menu_name' => 'Temples', // menu name.
+        ],
+        'description' => 'Our Temples',
+        'public' => true,
+        'publicly_queryable' => true, // depends on public
+        'exclude_from_search' => true, // depends on public
+        'show_ui' => true, // depends on public
+        'show_in_nav_menus' => true, // depends on public
+        'show_in_menu' => null, // whether to in admin panel menu
+        //'show_in_admin_bar'   => null, // depends on show_in_menu.
+        'show_in_rest' => null, // Add to REST API. WP 4.7.
+        'rest_base' => null, // $post_type. WP 4.7.
+        'menu_position' => 4,
+        'menu_icon' => 'dashicons-admin-customizer',
+        //'capability_type'   => 'post',
+        //'capabilities'      => 'post', // Array of additional rights for this post type.
+        //'map_meta_cap'      => null, // Set to true to enable the default handler for meta caps.
+        'hierarchical' => false,
+        // [ 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' ]
+        'supports' => ['title', 'editor', 'thumbnail', 'post-formats'],
+        'has_archive' => false,
+        'rewrite' => true,
+        'query_var' => true,
+    ]);
+
+    register_post_type('Museums', [
+        'taxonomies' => [], // post related taxonomiesk
+        'label' => null,
+        'labels' => [
+            'name' => 'Museums', // name for the post type.
+            'singular_name' => 'Museums', // name for single post of that type.
+            'add_new' => 'Add Museums', // to add a new post.
+            'add_new_item' => 'Adding Museums', // title for a newly created post in the admin panel.
+            'edit_item' => 'Edit Museums', // for editing post type.
+            'new_item' => 'New Museums', // new post's text.
+            'view_item' => 'See Museums', // for viewing this post type.
+            'search_items' => 'Search Museums', // search for these post types.
+            'not_found' => 'Not Found', // if search has not found anything.
+            'parent_item_colon' => '', // for parents (for hierarchical post types).
+            'menu_name' => 'Museums', // menu name.
+        ],
+        'description' => 'Our Museums',
+        'public' => true,
+        'publicly_queryable' => true, // depends on public
+        'exclude_from_search' => true, // depends on public
+        'show_ui' => true, // depends on public
+        'show_in_nav_menus' => true, // depends on public
+        'show_in_menu' => null, // whether to in admin panel menu
+        //'show_in_admin_bar'   => null, // depends on show_in_menu.
+        'show_in_rest' => null, // Add to REST API. WP 4.7.
+        'rest_base' => null, // $post_type. WP 4.7.
+        'menu_position' => 4,
+        'menu_icon' => 'dashicons-admin-customizer',
+        //'capability_type'   => 'post',
+        //'capabilities'      => 'post', // Array of additional rights for this post type.
+        //'map_meta_cap'      => null, // Set to true to enable the default handler for meta caps.
+        'hierarchical' => false,
+        // [ 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'page-attributes', 'post-formats' ]
+        'supports' => ['title', 'editor', 'thumbnail', 'post-formats'],
+        'has_archive' => false,
+        'rewrite' => true,
+        'query_var' => true,
+    ]);
+
+    register_post_type('Fragments', [
+        'taxonomies' => [], // post related taxonomiesk
+        'label' => null,
+        'labels' => [
+            'name' => 'Fragments', // name for the post type.
+            'singular_name' => 'Fragments', // name for single post of that type.
+            'add_new' => 'Add Fragments', // to add a new post.
+            'add_new_item' => 'Adding Fragments', // title for a newly created post in the admin panel.
+            'edit_item' => 'Edit Fragments', // for editing post type.
+            'new_item' => 'New Fragments', // new post's text.
+            'view_item' => 'See Fragments', // for viewing this post type.
+            'search_items' => 'Search Fragments', // search for these post types.
+            'not_found' => 'Not Found', // if search has not found anything.
+            'parent_item_colon' => '', // for parents (for hierarchical post types).
+            'menu_name' => 'Fragments', // menu name.
+        ],
+        'description' => 'Our Fragments',
         'public' => true,
         'publicly_queryable' => true, // depends on public
         'exclude_from_search' => true, // depends on public
@@ -245,7 +363,7 @@ function theme_register_nav_menu()
 {
     register_nav_menu('top', 'Меню в шапці');
     register_nav_menu('footer', 'Меню в підвалі');
-    add_theme_support('post-thumbnails', array('post', 'gallerys', 'schools', 'iconography', 'masters', 'books'));
+    add_theme_support('post-thumbnails', array('post', 'plots', 'schools', 'iconography', 'masters', 'books', 'temples', 'museums', 'fragments'));
 
 }
 
@@ -276,8 +394,11 @@ add_action('carbon_fields_register_fields', 'crb_attach_theme_options');
 function crb_attach_theme_options()
 {
     Container::make('post_meta', 'Image gallery')
-        ->where('post_type', '=', 'gallerys')
+        ->where('post_type', '=', 'plots')
         ->or_where('post_type', '=', 'schools')
+        ->or_where('post_type', '=', 'temples')
+        ->or_where('post_type', '=', 'fragments')
+        ->or_where('post_type', '=', 'museums')
         ->or_where('post_type', '=', 'iconography')
         ->or_where('post_type', '=', 'masters')
 
@@ -306,6 +427,20 @@ function polylang_strings()
     if (!function_exists('pll_register_string')) {
         return;
     }
+    pll_register_string(
+        'temples_gallery_title', // название строки
+        'Temples gallery title', // сама строка
+        'First page', // категория для удобства
+        false// будут ли тут переносы строк в тексте или нет
+    );
+
+    pll_register_string(
+        'temples_gallery_sub-title', // название строки
+        'Temples gallery sub title', // сама строка
+        'First page', // категория для удобства
+        true// будут ли тут переносы строк в тексте или нет
+    );
+
     pll_register_string(
         'gallery_title', // название строки
         'Gallery title', // сама строка
@@ -369,7 +504,7 @@ function my_cptui_add_post_type_to_search($query)
 {
     if ($query->is_search()) {
         // Replace these slugs with the post types you want to include.
-        $cptui_post_types = array('iconography', 'gallerys', 'masters', 'schools', 'articles', 'books');
+        $cptui_post_types = array('iconography', 'plots', 'masters', 'schools', 'articles', 'books', 'temples', 'museums', 'fragments');
 
         $query->set(
             'post_type',

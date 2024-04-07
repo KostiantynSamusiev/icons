@@ -3,11 +3,8 @@
 <?php get_header();?>
 <main>
 <div class="container-gallery">
-    <div class="container-gallery__single-logo">
-    <?php echo the_post_thumbnail('thumbnail', "medium_large"); ?>
-    </div>
     <div class="container-gallery__single-title">
-<h3>Майстри</h3>
+<h3>окремі сюжети</h3>
     </div>
     <div class="container-gallery__title">
         <h2><?php the_title();?></h2>

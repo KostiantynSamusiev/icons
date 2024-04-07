@@ -1,7 +1,7 @@
 function owlCarousel() {
     $(document).ready(function () {
         $("#gallery").owlCarousel({
-            // loop: true,
+            loop: true,
             margin: 10,
             nav: true,
             navigationText: ["", ""],

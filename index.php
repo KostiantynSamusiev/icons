@@ -31,7 +31,7 @@ get_header();
 
 				<div class="owl-item__block-info">
 					<p class="owl-item__title">
-						<?php echo esc_attr(pll__('Plots gallery title')) ?>
+						<?php echo esc_attr(pll__('Plots gallery&single page title')) ?>
 					</p>
 
 					<p class="owl-item__sub-title"><?php echo esc_attr(pll__('Plots gallery sub title')) ?></p>
@@ -46,10 +46,10 @@ get_header();
 
 				<div class="owl-item__block-info">
 					<p class="owl-item__title">
-						<?php echo esc_attr(pll__('Plots gallery title')) ?>
+						<?php echo esc_attr(pll__('Museum gallery&single page title')) ?>
 					</p>
 
-					<p class="owl-item__sub-title"><?php echo esc_attr(pll__('Plots gallery sub title')) ?></p>
+					<p class="owl-item__sub-title"><?php echo esc_attr(pll__('Museum gallery sub title')) ?></p>
 				</div>
 				</a>
 			</div>
@@ -62,10 +62,10 @@ get_header();
 
 				<div class="owl-item__block-info">
 					<p class="owl-item__title">
-						<?php echo esc_attr(pll__('Plots gallery title')) ?>
+						<?php echo esc_attr(pll__('Temples gallery&single page title')) ?>
 					</p>
 
-					<p class="owl-item__sub-title"><?php echo esc_attr(pll__('Plots gallery sub title')) ?></p>
+					<p class="owl-item__sub-title"><?php echo esc_attr(pll__('Temples gallery sub title')) ?></p>
 				</div>
 				</a>
 			</div>
@@ -78,10 +78,10 @@ get_header();
 
 				<div class="owl-item__block-info">
 					<p class="owl-item__title">
-						<?php echo esc_attr(pll__('Plots gallery title')) ?>
+						<?php echo esc_attr(pll__('Fragments gallery&single page title')) ?>
 					</p>
 
-					<p class="owl-item__sub-title"><?php echo esc_attr(pll__('Plots gallery sub title')) ?></p>
+					<p class="owl-item__sub-title"><?php echo esc_attr(pll__('Fragments gallery sub title')) ?></p>
 				</div>
 				</a>
 			</div>

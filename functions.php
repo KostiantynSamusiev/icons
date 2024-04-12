@@ -456,15 +456,15 @@ function polylang_strings()
     );
 
     pll_register_string(
-        'fragments_gallery_title', // название строки
-        'Fragments gallery&single page title', // сама строка
+        'temples_gallery_title', // название строки
+        'Temples gallery&single page title', // сама строка
         'First page', // категория для удобства
         false// будут ли тут переносы строк в тексте или нет
     );
 
     pll_register_string(
-        'fragments_gallery_sub-title', // название строки
-        'Fragments gallery sub title', // сама строка
+        'temples_gallery_sub-title', // название строки
+        'Temples gallery sub title', // сама строка
         'First page', // категория для удобства
         true// будут ли тут переносы строк в тексте или нет
     );

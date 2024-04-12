@@ -7,15 +7,16 @@ Template Name: Iconography
 
 <?php get_header();?>
 <main>
-<div class="container-gallery">
-    <div class="container-gallery__title">
-        <h2>Іконографія</h2>
-    </div>
-    <div class="container-gallery__sub-title">
-        <h3>Si no hay nadie más trendy que tú, esto te interesa. Te traemos nuevas piezas de diseño cada semana para que tu casa encaje a la perfección con tu estilo de vida. </h3>
-    </div>
-    <div class="container-gallery__continer-posts ">
-    <?php
+    <div class="container-gallery">
+        <div class="container-gallery__title">
+            <h2>Іконографія</h2>
+        </div>
+        <div class="container-gallery__sub-title">
+            <h3>Si no hay nadie más trendy que tú, esto te interesa. Te traemos nuevas piezas de diseño cada semana para
+                que tu casa encaje a la perfección con tu estilo de vida. </h3>
+        </div>
+        <div class="container-gallery__continer-posts ">
+            <?php
 global $post;
 
 $myposts = get_posts([
@@ -31,7 +32,7 @@ foreach ($myposts as $post) {
                 <a href="<?php the_permalink();?>">
                     <div class="item__info">
                         <div class="name"><?php the_title();?></div>
-                        <div class="content"<?php the_content();?>></div>
+                        <div class="content"> <?php the_content();?></div>
                     </div>
                 </a>
 
@@ -40,10 +41,8 @@ foreach ($myposts as $post) {
 }
 wp_reset_postdata();
 ?>
+        </div>
     </div>
-</div>
 </main>
 
 <?php get_footer();?>
-
-

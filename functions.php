@@ -7,11 +7,11 @@ add_action('wp_footer', 'iconsTheme_scripts');
 function register_post_types()
 {
 
-    register_post_type('Plots', [
+    register_post_type('Gallerys', [
         'taxonomies' => [], // post related taxonomiesk
         'label' => null,
         'labels' => [
-            'name' => 'Plots', // name for the post type.
+            'name' => 'Gallerys', // name for the post type.
             'singular_name' => 'Plots', // name for single post of that type.
             'add_new' => 'Add Plots', // to add a new post.
             'add_new_item' => 'Adding Plots', // title for a newly created post in the admin panel.
@@ -363,7 +363,7 @@ function theme_register_nav_menu()
 {
     register_nav_menu('top', 'Меню в шапці');
     register_nav_menu('footer', 'Меню в підвалі');
-    add_theme_support('post-thumbnails', array('post', 'plots', 'schools', 'iconography', 'masters', 'books', 'temples', 'museums', 'fragments'));
+    add_theme_support('post-thumbnails', array('post', 'gallerys', 'schools', 'iconography', 'masters', 'books', 'temples', 'museums', 'fragments'));
 
 }
 
@@ -394,7 +394,7 @@ add_action('carbon_fields_register_fields', 'crb_attach_theme_options');
 function crb_attach_theme_options()
 {
     Container::make('post_meta', 'Image gallery')
-        ->where('post_type', '=', 'plots')
+        ->where('post_type', '=', 'gallerys')
         ->or_where('post_type', '=', 'schools')
         ->or_where('post_type', '=', 'temples')
         ->or_where('post_type', '=', 'fragments')
@@ -428,24 +428,59 @@ function polylang_strings()
         return;
     }
     pll_register_string(
-        'temples_gallery_title', // название строки
-        'Temples gallery title', // сама строка
+        'plots_gallery_title', // название строки
+        'Plots gallery&single page title', // сама строка
         'First page', // категория для удобства
         false// будут ли тут переносы строк в тексте или нет
     );
 
     pll_register_string(
-        'temples_gallery_sub-title', // название строки
-        'Temples gallery sub title', // сама строка
+        'plots_gallery_sub-title', // название строки
+        'Plots gallery sub title', // сама строка
         'First page', // категория для удобства
         true// будут ли тут переносы строк в тексте или нет
     );
 
     pll_register_string(
-        'gallery_title', // название строки
-        'Gallery title', // сама строка
+        'museum_gallery_title', // название строки
+        'Museum gallery&single page title', // сама строка
         'First page', // категория для удобства
         false// будут ли тут переносы строк в тексте или нет
+    );
+
+    pll_register_string(
+        'museum_gallery_sub-title', // название строки
+        'Museum gallery sub title', // сама строка
+        'First page', // категория для удобства
+        true// будут ли тут переносы строк в тексте или нет
+    );
+
+    pll_register_string(
+        'fragments_gallery_title', // название строки
+        'Fragments gallery&single page title', // сама строка
+        'First page', // категория для удобства
+        false// будут ли тут переносы строк в тексте или нет
+    );
+
+    pll_register_string(
+        'fragments_gallery_sub-title', // название строки
+        'Fragments gallery sub title', // сама строка
+        'First page', // категория для удобства
+        true// будут ли тут переносы строк в тексте или нет
+    );
+
+    pll_register_string(
+        'fragments_gallery_title', // название строки
+        'Fragments gallery&single page title', // сама строка
+        'First page', // категория для удобства
+        false// будут ли тут переносы строк в тексте или нет
+    );
+
+    pll_register_string(
+        'fragments_gallery_sub-title', // название строки
+        'Fragments gallery sub title', // сама строка
+        'First page', // категория для удобства
+        true// будут ли тут переносы строк в тексте или нет
     );
 
     pll_register_string(
@@ -504,7 +539,7 @@ function my_cptui_add_post_type_to_search($query)
 {
     if ($query->is_search()) {
         // Replace these slugs with the post types you want to include.
-        $cptui_post_types = array('iconography', 'plots', 'masters', 'schools', 'articles', 'books', 'temples', 'museums', 'fragments');
+        $cptui_post_types = array('iconography', 'gallerys', 'masters', 'schools', 'articles', 'books', 'temples', 'museums', 'fragments');
 
         $query->set(
             'post_type',

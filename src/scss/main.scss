@@ -15,7 +15,7 @@
   font-weight: 400;
   line-height: normal;
   /* 120% */
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 @mixin titleH2 {
@@ -226,9 +226,6 @@ strong {
 }
 
 .articrle {
-  .name {
-    text-transform: uppercase !important;
-  }
 
   .icon {
     height: 34px;
@@ -543,9 +540,44 @@ main {
         .owl-item{
            background: grey;
            height: 100%;
+
+           &__bg{
+            position: absolute;
+            z-index:-1;
+            filter: brightness(.6);
+           }
+
+           &__block-info{
+            margin-top: auto;
+            padding: 20px;
+           }
+           &__title,
+           &__sub-title{
+            font-family: "KyivTypeSans-Bold";
+            color: #ffffff;
+            text-transform: none;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: .4px;
+           }
+           &__sub-title{
+            line-height: normal;
+            font-size: 10px;
+           }
+        }
+
+        .owl-block,
+        .owl-block a {
+          height: 100%;
+          width: 100%;
+          display: flex;
         }
       }
     }
+
+
   }
 
   .iconography {
@@ -776,6 +808,7 @@ main {
 
       &__info {
         @include discribe();
+        
         color: black;
       }
 
@@ -1026,6 +1059,26 @@ footer {
             right: 30%
           }
         }
+
+        .owl-stage-outer {
+          .owl-item{
+
+            &__block-info{
+              padding: 20px 34px ;
+            }
+
+            &__title{
+  font-size: 35px;
+  line-height: normal;
+            }
+            &__sub-title{
+              max-width: 361px;
+              margin-top: 10px;
+              font-size: 12px;
+            }
+          }
+        }
+        
       }
     }
 
@@ -1267,6 +1320,16 @@ footer {
 
           height: 30vw;
 
+          .owl-item {
+            &__block-info{
+              padding:  50px;
+            }
+
+            &__sub-title{
+              max-width: 540px;
+            }
+          }
+       
           .active {
             width: 1000px !important;
           }

@@ -30,7 +30,7 @@
 
 
 				<div class="header__navigation">
-					<a href="<?php echo pll_home_url(); ?>" class="logo">
+					<a href="<?php echo get_home_url(); ?>" class="logo">
 						<img src="<?php echo bloginfo('template_url'); ?>/assets/img/logo.svg" alt="">
 					</a>
 

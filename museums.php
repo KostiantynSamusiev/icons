@@ -10,10 +10,11 @@ Template Name: Museums
 <main>
 <div class="container-gallery">
     <div class="container-gallery__title">
-        <h2>Окремі сюжети</h2>
+        <h2>						<?php echo esc_attr(pll__('Museum gallery&single page title')) ?>
+</h2>
     </div>
     <div class="container-gallery__sub-title">
-        <h3>Si no hay nadie más trendy que tú, esto te interesa. Te traemos nuevas piezas de diseño cada semana para que tu casa encaje a la perfección con tu estilo de vida. </h3>
+        <h3><?php echo esc_attr(pll__('Museum gallery sub title')) ?></h3>
     </div>
     <div class="container-gallery__continer-items container">
 

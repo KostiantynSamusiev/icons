@@ -27,7 +27,7 @@ get_header();
 
 			<a href=" <?php echo get_the_permalink(pll_get_post(get_page_by_path('plots')->ID)); ?>">
 
-				<img class="owl-item__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/start-01.jpg" alt="">
+				<img class="owl-item__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/start-01.webp" alt="">
 
 				<div class="owl-item__block-info">
 					<p class="owl-item__title">
@@ -42,7 +42,7 @@ get_header();
 
 			<a href=" <?php echo get_the_permalink(pll_get_post(get_page_by_path('museums')->ID)); ?>">
 
-				<img class="owl-item__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/museums.jpg" alt="">
+				<img class="owl-item__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/museums.webp" alt="">
 
 				<div class="owl-item__block-info">
 					<p class="owl-item__title">
@@ -57,7 +57,8 @@ get_header();
 
 				<a href=" <?php echo get_the_permalink(pll_get_post(get_page_by_path('temples')->ID)); ?>">
 
-				<img class="owl-item__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/templates.jpg" alt="">
+				<img class="owl-item__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/templates.webp"
+					alt="">
 
 				<div class="owl-item__block-info">
 					<p class="owl-item__title">
@@ -72,7 +73,8 @@ get_header();
 
 				<a href=" <?php echo get_the_permalink(pll_get_post(get_page_by_path('fragments')->ID)); ?>">
 
-				<img class="owl-item__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/fragments.jpg" alt="">
+				<img class="owl-item__bg" src="<?php echo bloginfo('template_url'); ?>/assets/img/fragments.webp"
+					alt="">
 
 				<div class="owl-item__block-info">
 					<p class="owl-item__title">
@@ -93,7 +95,7 @@ get_header();
 		</div>
 		<div class="iconography__container">
 			<div class="left-block">
-				<img class="left-block__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/iconography.jpg"
+				<img class="left-block__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/iconography.webp"
 					alt="">
 
 			</div>
@@ -213,7 +215,7 @@ wp_reset_postdata();
 				</div>
 			</div>
 			<div class="right-block">
-				<img class="left-block__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/masters.jpg"
+				<img class="left-block__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/masters.webp"
 					alt="">
 			</div>
 		</div>
@@ -270,7 +272,7 @@ wp_reset_postdata();
 				</div>
 			</div>
 			<div class="right-block">
-				<img class="left-block__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/articles.jpg"
+				<img class="left-block__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/articles.webp"
 					alt="">
 			</div>
 
